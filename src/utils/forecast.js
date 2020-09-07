@@ -9,7 +9,7 @@ const forecast = (longitude, latitude, callback) => {
         } else if (body.error) {
             callback('Unable to detect your location. Please try other coordinates.', undefined)
         } else {
-            callback(undefined, 'It is ' + body.current.weather_descriptions[0] + '. The temperature is '+ body.current.temperature + ' degrees. It feels like ' + body.current.feelslike +' degrees.')
+            callback(undefined, 'It is ' + body.current.weather_descriptions[0] + '. The temperature is '+ body.current.temperature + ' degrees. It feels like ' + body.current.feelslike + ' degrees. The humidity is ' + body.current.humidity + '%.')
         }
     })
 }
